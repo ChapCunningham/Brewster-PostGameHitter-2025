@@ -7,9 +7,9 @@ import matplotlib.image as mpimg
 import numpy as np
 
 # Load the CSV data
-file_path = 'Brewster_Hitters_NCAA_2025.csv'
+file_path = 'Brewster @ MV 6:12:25 EXHIBITION.csv'
 data = pd.read_csv(file_path, low_memory=False)
-data = data[data['BatterTeam'] == 'FLA_GAT']
+data = data[data['BatterTeam'] == 'BRE_WHI1']
 
 # Load the Ole Miss logo
 logo_path = 'brewster_logo.jpeg'
