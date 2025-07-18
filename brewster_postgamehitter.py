@@ -352,6 +352,7 @@ for pa_number, pa_data in plate_appearance_groups:
     bearing = np.radians(last_pitch["Bearing"])
     distance = last_pitch["Distance"]
     exit_speed = round(last_pitch["ExitSpeed"], 1) if pd.notnull(last_pitch["ExitSpeed"]) else "NA"
+    launch = round(last_pitch["Angle"], 1) if pd.notnull(last_pitch["Angle"]) else "NA"
     play_result = last_pitch["PlayResult"]
 
     # Convert polar to Cartesian coordinates
@@ -380,7 +381,7 @@ for pa_number, pa_data in plate_appearance_groups:
     ev_rotation = 180 if st.session_state.rotate_180 else 0
     ax.text(
         x, y - ev_y_offset, 
-        f"{exit_speed} mph" if exit_speed != "NA" else "NA",
+        f"{exit_speed} / {launch}" if exit_speed != "NA" else "NA",
         color="red", fontsize=8, fontweight="bold", ha="center",
         rotation=ev_rotation, transform=ax.transData
     )
