@@ -9,7 +9,7 @@ import numpy as np
 # Load the CSV data
 file_path = 'Brewster_2025_MASTER.CSV'
 data = pd.read_csv(file_path, low_memory=False)
-data = data[data['BatterTeam'] == 'BRE_WHI']
+#data = data[data['BatterTeam'] == 'BRE_WHI']
 
 # Load the Ole Miss logo
 logo_path = 'brewster_logo.jpeg'
